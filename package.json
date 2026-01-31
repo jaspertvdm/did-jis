@@ -1,0 +1,72 @@
+{
+  "name": "did-jis",
+  "version": "0.1.1",
+  "description": "JIS (JTel Identity Standard) - Bilateral consent and intent verification with TIBET provenance trails",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint src/",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "did",
+    "jis",
+    "tibet",
+    "identity",
+    "verifiable-credentials",
+    "bilateral-consent",
+    "provenance",
+    "audit-trail",
+    "w3c",
+    "decentralized-identity",
+    "trust",
+    "intent",
+    "ietf"
+  ],
+  "author": {
+    "name": "Jasper van de Meent",
+    "email": "jasper@humotica.nl",
+    "url": "https://humotica.com"
+  },
+  "contributors": [
+    {
+      "name": "Claude (Anthropic)",
+      "url": "https://anthropic.com"
+    }
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaspertvdm/did-jis.git"
+  },
+  "homepage": "https://humotica.com",
+  "bugs": {
+    "url": "https://github.com/jaspertvdm/did-jis/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^1.0.0"
+  }
+}
